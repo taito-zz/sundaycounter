@@ -1,6 +1,5 @@
 import argparse
 import logging
-import os
 
 from logging.config import dictConfig
 
@@ -38,7 +37,7 @@ def new_sunday(date):
     year, month, day = date
     days_of_months = days_of_month_of_year(year)
     days_from_months = sum(days_of_months[:month - 1])
-    days_from_years =  sum([days_of_one_year(one_year) for one_year in range(1900, year)])
+    days_from_years = sum([days_of_one_year(one_year) for one_year in range(1900, year)])
     days = day + days_from_months + days_from_years
     remain = 7 - days % 7
     days_in_month = days_of_months[month - 1]
@@ -50,7 +49,7 @@ def new_sunday(date):
         day = day + remain - days_in_month
     else:
         day = day + remain - days_in_month
-        month +=1
+        month += 1
 
     return (year, month, day)
 
@@ -80,6 +79,7 @@ def list_sundays(start, end, reverse=False):
         sundays.reverse()
 
     return sundays
+
 
 def countsundays():
     parser = argparse.ArgumentParser(description='Print date of Sundays between two dates')
@@ -150,7 +150,6 @@ def countsundays():
         warned = True
 
     if warned is False:
-        # sundays =  list_sundays(args.start, args.end, reverse=args.reverse)
-        sundays =  list_sundays(start, end, reverse=args.reverse)
+        sundays = list_sundays(start, end, reverse=args.reverse)
         for sunday in sundays:
             logger.info(sunday)
