@@ -2,7 +2,7 @@
 Sunday counter
 ================
 
-This package provides a command to list sundays between two dates.
+This package provides a command to list Sundays between two dates.
 
 This package is developed for python-3.6, so within this package, run::
 
