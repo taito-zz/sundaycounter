@@ -1,26 +1,8 @@
 import unittest
 
-from unittest import mock
-
-# from sundaycounter import SundayCounter
-
 
 class TestCase(unittest.TestCase):
     """TestCase for class: sundaycounter.SundayCounter"""
-
-    # def test_instance(self):
-    #     start = '1.1.1900'
-    #     end = '1.1.1900'
-    #     instance = SundayCounter(start, end)
-    #     self.assertEqual(instance.start, start)
-    #     self.assertEqual(instance.end, end)
-    #     self.assertFalse(instance.reverse)
-
-    # def test_int_date(self):
-    #     start = '1.1.1900'
-    #     end = '1.1.1900'
-    #     instance = SundayCounter(start, end)
-    #     self.assertEqual(instance.int_date('1.2.1900'), (1900, 2, 1))
 
     def test_new_sunday(self):
         from sundaycounter import new_sunday
